@@ -65,8 +65,8 @@ class MockModuleFinder:
 # Mock ray and vllm (and all subpackages) before importing from lm_eval.models
 sys.meta_path.insert(0, MockModuleFinder(["vllm", "ray"]))  # type: ignore
 
-import pytest  # noqa: E402
-from transformers import AutoTokenizer  # noqa: E402
+import pytest
+from transformers import AutoTokenizer
 
 from lm_eval.models.utils import _add_special_kwargs, has_bos_prefix
 
